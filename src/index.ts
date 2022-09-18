@@ -1,5 +1,3 @@
-const hello = (name: string): string => {
-  return `Hello ${name}`;
-};
+import { hello } from "./hello";
 
 console.log(hello("World"));

@@ -4,6 +4,7 @@
   "description": "livereloading server for markdown editing ",
   "main": "index.js",
   "scripts": {
+    "build": "npx tsc",
     "do": "node dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
