@@ -7,7 +7,7 @@
     "strict": true,
     "skipLibCheck": true,
     "outDir": "./dist",
-    "rootDir": "./src",
-    "exclude": ["./tests/", "./node_modules/", "./dist/"]
-  }
+    "rootDir": "./src"
+  },
+  "exclude": ["./tests/", "./node_modules/", "./dist/"]
 }
