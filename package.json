@@ -1,9 +1,10 @@
 {
-  "name": "fosi",
-  "version": "0.1.0",
+  "name": "@hotoku/fosi",
+  "version": "0.1.2",
   "description": "livereloading server for markdown editing ",
   "main": "index.js",
   "scripts": {
+    "publish": "npm publish --access public",
     "build": "npx tsc",
     "do": "node dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
