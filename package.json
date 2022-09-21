@@ -6,7 +6,7 @@
   "scripts": {
     "publish": "npm publish --access public",
     "build": "npx tsc",
-    "do": "node dist/index.js",
+    "start": "node dist/server.js",
     "test": "mocha -r ts-node/register 'tests/**/*.ts'"
   },
   "repository": {

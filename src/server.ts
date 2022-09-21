@@ -1,8 +1,7 @@
 import express from "express";
 
 const app = express();
-app.get("/", (_, res) => {
-  res.send("hello");
-});
+
+app.use("/", express.static(`${__dirname}/../public`));
 
 app.listen(3000);
