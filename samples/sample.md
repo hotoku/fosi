@@ -8,7 +8,9 @@
 
 ![letter](./a.png)
 
-```python
-x = 1
-y = 3
+```mermaid
+flowchart TD
+    a
+    b
+    a --> b
 ```
