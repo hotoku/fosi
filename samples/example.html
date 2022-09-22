@@ -1,0 +1,80 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="msapplication-tap-highlight" content="no">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link rel="stylesheet" href="https://pathli.com/app/assets/build/style/select2_material.css"/>
+  <link rel="stylesheet" href="https://pathli.com/app/assets/build/style/materialize.css" />
+  <link rel='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mermaid/6.0.0/mermaid.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/6.0.0/mermaid.js"></script>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+ 
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/select2/3.5.2/select2.min.js"></script>
+  <link href="https://cdn.rawgit.com/novus/nvd3/master/build/nv.d3.css" rel="stylesheet" type="text/css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.2/d3.min.js" charset="utf-8"></script>
+  <script src="https://cdn.rawgit.com/novus/nvd3/master/build/nv.d3.js"></script>
+    <script>
+      document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
+                     ':35729/livereload.js?snipver=1"></' + 'script>')
+    </script>
+
+
+</head>
+<body>
+  
+  <div class='row'>
+    <div class="col s12">
+      <div class="card" style="overflow:auto;padding:0.02rem 0.5rem;margin:auto">
+        <div class="card-content" style="padding:0">
+            
+              <div class="input-field mermaid" style="margin:auto;">
+            graph TD 
+              st{HI!}
+              good((Great!!))
+              bad((Mizzz))
+              en>Goodbye!]
+              A((HI))
+                X((xxx))
+              style st fill:blue,fill-opacity:0.35,color:#FFFFFF,stroke-opacity:0.2
+              style en fill:red,fill-opacity:0.35,color:#FFFFFF,stroke-opacity:0.2
+              classDef eco fill:green;
+              class A eco
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" style="text-align:center;margin-left:auto;margin-right:auto;">
+  <div class="col s10 offset-s1" style="">
+  <div class="card" style="display:block">
+    <div class="card-content">
+      <div class="mermaid">
+       graph TB
+         A[13,032] --> |Accept John's Offer| B[12,000]
+         A ==> |Reject John's Offer |C(($13,032))
+         C --> |Offer from Vanessa 0.6| D[$14,000]
+         D ==> |Accept Vanessa's Offer| E[$14,000]
+         D --> |Reject Vanessa's Offer| F(($11,580))
+         C --> |No Offer from Vanessa 0.4| G(($11,580))
+         G --> |Salary 1 0.05| H[$21,600]
+         G --> |Salary 2 0.25| I[$16,800]
+         G --> |Salary 3 0.40| J[$12,800]
+         G --> |Salary 4 0.25| K[$6,000]
+         G --> |Salary 5 0.05| L[$0]
+         F --> |Salary 1 0.05| M[$21,600]
+         F --> |Salary 2 0.25| N[$16,800]
+         F --> |Salary 3 0.40| O[$12,800]
+         F --> |Salary 4 0.25| P[$6,000]
+         F --> |Salary 5 0.05| Q[$0]
+     </div>
+    </div>
+  </div>
+</div>  
+  </div>
+</body>
