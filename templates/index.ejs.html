@@ -13,11 +13,13 @@
             <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
         <link rel="shortcut icon" href="">
+        <script>
+         document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
+                        ':35729/livereload.js?snipver=1"></' + 'script>')
+        </script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/mermaid/<%- mermaid_version %>/mermaid.css" rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/<%- mermaid_version %>/mermaid.js"></script>
     </head>
-    <script>
-      document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
-                     ':35729/livereload.js?snipver=1"></' + 'script>')
-    </script>
     <body>
         <%- contents %>
     </body>

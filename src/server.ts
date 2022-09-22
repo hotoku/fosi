@@ -25,7 +25,10 @@ export const launchServers = (
     const converted = convertString(markdown);
     const templateFile = `${__dirname}/../templates/index.ejs.html`;
     const template = fs.readFileSync(templateFile).toString();
-    const html = ejs.render(template, { contents: converted });
+    const html = ejs.render(template, {
+      contents: converted,
+      mermaid_version: "9.1.6",
+    });
     fs.writeFileSync(destFile, html);
   };
 
