@@ -12,5 +12,6 @@
 flowchart TD
     a
     b
+    c
     a --> b
 ```
