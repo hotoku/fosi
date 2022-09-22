@@ -2,14 +2,12 @@ import yargs from "yargs";
 import path from "path";
 import { launchServers } from "./server";
 
-interface Argv {
-  f: string;
-}
-
-const parseArguments = (): Argv => {
+const parseArguments = () => {
   const argv = yargs(process.argv.slice(2))
     .options({
-      f: { type: "string", demandOption: true },
+      i: { type: "string", demandOption: true, describe: "input file" },
+      d: { type: "string", describe: "output file", default: "./index.html" },
+      f: { type: "boolean", describe: "overwrite existing output" },
     })
     .parseSync();
   return argv;
@@ -17,8 +15,8 @@ const parseArguments = (): Argv => {
 
 const main = () => {
   const argv = parseArguments();
-  const sourceFile = path.resolve(argv.f);
-  launchServers(sourceFile);
+  const sourceFile = path.resolve(argv.i);
+  launchServers(sourceFile, { force: argv.f });
 };
 
 main();
