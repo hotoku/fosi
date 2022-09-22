@@ -6,7 +6,7 @@
 
 ## piyo
 
-![letter](./public/b.png)
+![letter](./a.png)
 
 ```python
 x = 1

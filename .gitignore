@@ -71,6 +71,4 @@ typings/
 /dist/
 /tasks.md
 
-public/letter.png
-/public/index.html
-/index.html
+/samples/index.html
