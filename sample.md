@@ -2,11 +2,11 @@
 
 ## fuga
 
-あいうえお
+さしすせそ
 
 ## piyo
 
-![letter](./a.png)
+![letter](./public/b.png)
 
 ```python
 x = 1
