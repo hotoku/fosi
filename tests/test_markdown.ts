@@ -37,9 +37,8 @@ sentence
 });
 
 describe("convert mermaid tag", () => {
-  it("should be replaced with div tag (with DOCTYPE)", () => {
+  it("should be replaced with div tag", () => {
     const orig = `
-<!DOCTYPE html>
 <html>
  <body>
   <pre>
@@ -73,8 +72,9 @@ flowchart TD
     );
   });
 
-  it("should be replaced with div tag", () => {
+  it("should be replaced with div tag (with DOCTYPE)", () => {
     const orig = `
+<!DOCTYPE html>
 <html>
  <body>
   <pre>

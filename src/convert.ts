@@ -7,7 +7,7 @@ import { DOMParserImpl } from "xmldom-ts";
 const removeDoctype = (s: string): { result: string; replaced: boolean } => {
   const replaced = s.search("<!DOCTYPE html>") < 0;
   return {
-    result: s.replace("<!DOCTYPE html>", "").trim(),
+    result: s.replace("<!DOCTYPE html>", ""),
     replaced: replaced,
   };
 };
@@ -24,7 +24,6 @@ export const convertString = (src: string): string => {
     pedantic: false,
     gfm: true,
     breaks: false,
-    sanitize: true,
     silent: false,
   });
 
@@ -40,7 +39,7 @@ export const convertFile = (srcPath: string, destPath: string) => {
 export const convertMermaidTag = (html: string): string => {
   const parser = new DOMParserImpl();
   const { result: replaced, replaced: is_replaced } = removeDoctype(html);
-  const doc = parser.parseFromString(replaced);
+  const doc = parser.parseFromString(replaced.trim(), "text/html");
   const nodes = xpath.select(
     "//pre[child::code[contains(@class, 'language-mermaid')]]",
     doc
