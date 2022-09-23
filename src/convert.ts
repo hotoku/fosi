@@ -29,18 +29,17 @@ export const convertFile = (srcPath: string, destPath: string) => {
   fs.writeFileSync(destPath, ret);
 };
 
-/*
 export const convertMermaidTag = (html: string): string => {
   const dom = new JSDOM(html);
   const nodes = dom.window.document.querySelectorAll("code.language-mermaid");
   for (const node of nodes) {
-    // (node.parentNode as ParentNode).replaceChild();
+    const pre = node.parentNode as ParentNode;
+    const parent = pre.parentNode as ParentNode;
+    parent.replaceChild(
+      createElement(`<div class="mermaid">${node.textContent}</div>`),
+      pre
+    );
   }
-  const ret = doc.toString();
-  if (is_replaced) {
-    return addDoctype(ret);
-  } else {
-    return ret;
-  }
+  const ret = dom.serialize().replace("&gt;", ">").replace("&lt;", "<");
+  return ret;
 };
-*/
