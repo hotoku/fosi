@@ -69,6 +69,7 @@ typings/
 .env
 .next
 /dist/
+!/dist/index.js
 /tasks.md
 
 /samples/index.html

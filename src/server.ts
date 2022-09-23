@@ -9,6 +9,7 @@ import { TargetFileExists } from "./exceptions";
 interface IOptions {
   force?: boolean;
   version?: string;
+  port?: number;
 }
 
 export const launchServers = (
@@ -19,6 +20,7 @@ export const launchServers = (
   const destFile = `${publicDir}/index.html`;
   const version = opts.version || "9.1.7";
   const templateDir = `${__dirname}/../templates`;
+  const port = opts.port || 3000;
 
   if (fs.existsSync(destFile) && !opts.force) {
     throw new TargetFileExists(destFile);
@@ -47,4 +49,6 @@ export const launchServers = (
 
   const server = livereload.createServer();
   server.watch(publicDir);
+
+  console.log(`Servers start. Visit http://localhost:${port}`);
 };

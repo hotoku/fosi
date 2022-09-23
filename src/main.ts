@@ -19,4 +19,4 @@ const main = () => {
   launchServers(sourceFile, { force: argv.f });
 };
 
-main();
+module.exports = main;

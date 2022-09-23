@@ -1,11 +1,14 @@
 {
   "name": "@hotoku/fosi",
-  "version": "0.2.2",
+  "version": "0.2.4",
   "description": "livereloading server for markdown editing ",
-  "main": "index.js",
+  "main": "./dist/index.js",
+  "bin": {
+    "fosi": "./dist/index.js"
+  },
   "scripts": {
     "publish": "npm publish --access public",
-    "build": "npx tsc",
+    "build": "npx tsc -p .",
     "start": "node dist/server.js",
     "test": "mocha -r ts-node/register 'tests/**/*.ts'"
   },
