@@ -8,13 +8,13 @@ This is a sample text.
 
 ```mermaid
 graph LR
-a --> b
-b --> c
-c --> a
-c --> d
-d --> a
-c --> e
-d --> e
+a --> b --> e
+a --> c --> e
+a --> d --> e
+e --> f & g & h
+f & g --> i
+h --> j
+i & j --> k
 ```
 
 ## tasks
