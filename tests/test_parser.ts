@@ -1,6 +1,5 @@
 import { expect } from "chai";
 import { JSDOM } from "jsdom";
-import { createElement } from "../src/convert";
 
 describe("parser test", () => {
   it("should extract code tag", () => {
