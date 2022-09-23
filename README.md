@@ -54,9 +54,9 @@ This software is published under MIT license.
 [Francesca Cesa Bianchi]: https://commons.wikimedia.org/wiki/File:%22_11_-_ITALY_-_cat.JPG
 [Lisa Zins]: https://www.flickr.com/people/94846844@N04
 [cat1-orig]: https://commons.wikimedia.org/wiki/Category:Domestic_cats#/media/File:%22_11_-_ITALY_-_cat.JPG
+[cat2-orig]: https://commons.wikimedia.org/wiki/Category:Domestic_cats#/media/File:%22Smile_Noah%22_-_%22THBPBPTHPT^^%22_-))_-_Flickr_-_Lisa_Zins.jpg
 
 
 <!-- 
-[cat2-orig]: https://commons.wikimedia.org/wiki/Category:Domestic_cats#/media/File:%22Smile_Noah%22_-_%22THBPBPTHPT^^%22_-))_-_Flickr_-_Lisa_Zins.jpg
 
  -->
