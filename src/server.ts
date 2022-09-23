@@ -11,14 +11,6 @@ interface IOptions {
   version?: string;
 }
 
-const removeDoctype = (s: string): string => {
-  return s.replace("<!DOCTYPE html>", "").trim();
-};
-
-const addDoctype = (s: string): string => {
-  return "<!DOCTYPE html>\n" + s;
-};
-
 export const launchServers = (
   sourceFile: string,
   opts: IOptions = {}
@@ -39,7 +31,7 @@ export const launchServers = (
       contents: converted,
       mermaid_version: version,
     });
-    const replaced = addDoctype(convertMermaidTag(removeDoctype(html)));
+    const replaced = convertMermaidTag(html);
     fs.writeFileSync(destFile, replaced);
   };
 

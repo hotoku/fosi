@@ -40,6 +40,6 @@ export const convertMermaidTag = (html: string): string => {
       pre
     );
   }
-  const ret = dom.serialize().replace("&gt;", ">").replace("&lt;", "<");
+  const ret = dom.serialize();
   return ret;
 };
