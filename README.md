@@ -40,9 +40,6 @@ This software is published under MIT license.
 <!-- links -->
 [github-markdown-css]: https://github.com/sindresorhus/github-markdown-css
 [MIT]: https://opensource.org/licenses/MIT
-
-
-<!-- 
 [markdown-github.css]: ./templates/markdown-github.css
 [cat1.jpg]: ./samples/cat1.jpg
 [cat2.jpg]: ./samples/cat2.jpg
@@ -50,6 +47,9 @@ This software is published under MIT license.
 [cc by 2.0]: https://creativecommons.org/licenses/by/2.0/
 [cat1-orig]: https://commons.wikimedia.org/wiki/Category:Domestic_cats#/media/File:%22_11_-_ITALY_-_cat.JPG
 [cc by-sa 3.0 it]: https://creativecommons.org/licenses/by-sa/3.0/it/deed.en
-[Sindre Sorhus ]: https://github.com/sindresorhus
+[Sindre Sorhus]: https://github.com/sindresorhus
 [Francesca Cesa Bianchi]: https://commons.wikimedia.org/wiki/File:%22_11_-_ITALY_-_cat.JPG
-[Lisa Zins]: https://www.flickr.com/people/94846844@N04 -->
+[Lisa Zins]: https://www.flickr.com/people/94846844@N04
+
+<!-- 
+ -->
