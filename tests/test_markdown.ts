@@ -37,19 +37,58 @@ sentence
 });
 
 describe("convert mermaid tag", () => {
-  it("should be replaced with div tag", () => {
+  it("should be replaced with div tag (with DOCTYPE)", () => {
     const orig = `
-<body>
- <pre>
-   <code class="language-mermaid">
+<!DOCTYPE html>
+<html>
+ <body>
+  <pre>
+    <code class="language-mermaid">
+ flowchart TD
+     a
+     b
+     c
+     a --> b
+    </code>
+  </pre>
+ </body>
+</html>
+`.trim();
+    const replaced = convertMermaidTag(orig);
+    const doc = new dom().parseFromString(replaced);
+    const elms = xpath.select(
+      "/body/div[contains(@class, 'mermaid')]",
+      doc
+    ) as Node[];
+    expect(elms.length).to.be.equal(1);
+    const cont = (elms[0].textContent || "").trim();
+    expect(cont).to.be.equal(
+      `
 flowchart TD
     a
     b
     c
     a --> b
-   </code>
- </pre>
-</body>`.trim();
+`.trim()
+    );
+  });
+
+  it("should be replaced with div tag", () => {
+    const orig = `
+<html>
+ <body>
+  <pre>
+    <code class="language-mermaid">
+ flowchart TD
+     a
+     b
+     c
+     a --> b
+    </code>
+  </pre>
+ </body>
+</html>
+`.trim();
     const replaced = convertMermaidTag(orig);
     const doc = new dom().parseFromString(replaced);
     const elms = xpath.select(

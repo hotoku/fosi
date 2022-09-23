@@ -4,6 +4,18 @@ import fs from "fs";
 import * as xpath from "xpath-ts";
 import { DOMParserImpl } from "xmldom-ts";
 
+const removeDoctype = (s: string): { result: string; replaced: boolean } => {
+  const replaced = s.search("<!DOCTYPE html>") < 0;
+  return {
+    result: s.replace("<!DOCTYPE html>", "").trim(),
+    replaced: replaced,
+  };
+};
+
+const addDoctype = (s: string): string => {
+  return "<!DOCTYPE html>\n" + s;
+};
+
 export const convertString = (src: string): string => {
   marked.setOptions({
     highlight: function (code, lang) {
@@ -27,7 +39,8 @@ export const convertFile = (srcPath: string, destPath: string) => {
 
 export const convertMermaidTag = (html: string): string => {
   const parser = new DOMParserImpl();
-  const doc = parser.parseFromString(html);
+  const { result: replaced, replaced: is_replaced } = removeDoctype(html);
+  const doc = parser.parseFromString(replaced);
   const nodes = xpath.select(
     "//pre[child::code[contains(@class, 'language-mermaid')]]",
     doc
@@ -38,5 +51,10 @@ export const convertMermaidTag = (html: string): string => {
       node
     );
   }
-  return doc.toString();
+  const ret = doc.toString();
+  if (is_replaced) {
+    return addDoctype(ret);
+  } else {
+    return ret;
+  }
 };
