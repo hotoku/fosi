@@ -8,6 +8,7 @@ import { TargetFileExists } from "./exceptions";
 
 interface IOptions {
   force?: boolean;
+  version?: string;
 }
 
 export const launchServers = (
@@ -16,6 +17,7 @@ export const launchServers = (
 ): void => {
   const publicDir = path.dirname(sourceFile);
   const destFile = `${publicDir}/index.html`;
+  const version = opts.version || "9.1.6";
 
   if (fs.existsSync(destFile) && !opts.force) {
     throw new TargetFileExists(destFile);
@@ -27,7 +29,7 @@ export const launchServers = (
     const template = fs.readFileSync(templateFile).toString();
     const html = ejs.render(template, {
       contents: converted,
-      mermaid_version: "9.1.6",
+      mermaid_version: version,
     });
     fs.writeFileSync(destFile, html);
   };
