@@ -29,7 +29,7 @@ export const convertMermaidTag = (html: string): string => {
   const parser = new DOMParserImpl();
   const doc = parser.parseFromString(html);
   const nodes = xpath.select(
-    "//pre[child::code[contains(@class, 'mermaid')]]",
+    "//pre[child::code[contains(@class, 'language-mermaid')]]",
     doc
   ) as Node[];
   for (const node of nodes) {
