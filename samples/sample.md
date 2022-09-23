@@ -1,45 +1,53 @@
-# hoge
+# edit markdown with livereload
 
-## fuga
+## sentences
 
-あいうえお
+This is a sample text.
 
-## piyo
-
-![letter](./b.png)
+## graph by mermaid
 
 ```mermaid
-flowchart TD
-  a --> c
-  c --> d
-  a --> c
-
-  d --> a
-  f --> g
-  g --> b
-
-  e --> c
-  b --> g
+graph LR
+a --> b
+b --> c
+c --> a
+c --> d
+d --> a
+c --> e
+d --> e
 ```
 
 ## tasks
 
-- [ ] あれをやる
-- [x] これをやる
+- [x] this is done
+- [ ] this should be done
+- [ ] ~this is cancelled~
+
+## codes
+
+### python
 
 ```python
 def f(x, y):
   return x + y
 ```
 
+### c++
+
 ```c++
-int main(int argc, char** argv) {
-    return 0;
+int f(int x, int y){
+  return x + y;
 }
 ```
 
-```typescript
+### typescript
+
+``` typescript
 const f = (x: number, y: number): number => {
     return x + y;
 }
 ```
+
+## picture
+
+![cat](./cat2.jpg)
