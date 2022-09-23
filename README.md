@@ -43,7 +43,11 @@ This software is published under MIT license.
 [markdown-github.css]: ./templates/markdown-github.css
 [cat1.jpg]: ./samples/cat1.jpg
 [cat2.jpg]: ./samples/cat2.jpg
-
+[cc by 2.0]: https://creativecommons.org/licenses/by/2.0/
+[cc by-sa 3.0 it]: https://creativecommons.org/licenses/by-sa/3.0/it/deed.en
+[Sindre Sorhus]: https://github.com/sindresorhus
+[Francesca Cesa Bianchi]: https://commons.wikimedia.org/wiki/File:%22_11_-_ITALY_-_cat.JPG
+[Lisa Zins]: https://www.flickr.com/people/94846844@N04
 [cc by 2.0]: https://creativecommons.org/licenses/by/2.0/
 [cc by-sa 3.0 it]: https://creativecommons.org/licenses/by-sa/3.0/it/deed.en
 [Sindre Sorhus]: https://github.com/sindresorhus
@@ -55,9 +59,4 @@ This software is published under MIT license.
 [cat2-orig]: https://commons.wikimedia.org/wiki/Category:Domestic_cats#/media/File:%22Smile_Noah%22_-_%22THBPBPTHPT^^%22_-))_-_Flickr_-_Lisa_Zins.jpg
 [cat1-orig]: https://commons.wikimedia.org/wiki/Category:Domestic_cats#/media/File:%22_11_-_ITALY_-_cat.JPG
 
-[cc by 2.0]: https://creativecommons.org/licenses/by/2.0/
-[cc by-sa 3.0 it]: https://creativecommons.org/licenses/by-sa/3.0/it/deed.en
-[Sindre Sorhus]: https://github.com/sindresorhus
-[Francesca Cesa Bianchi]: https://commons.wikimedia.org/wiki/File:%22_11_-_ITALY_-_cat.JPG
-[Lisa Zins]: https://www.flickr.com/people/94846844@N04
  -->
