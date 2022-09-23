@@ -35,7 +35,8 @@ This software is published under MIT license.
 
 - [markdown-github.css][markdown-github.css] is based on [github-markdown-css][github-markdown-css] by [Sindre Sorhus][sindre sorhus ], which is published under [MIT license][mit]. I have changed definitions of selectors slightily. The original one selects elements based on classes like `.markdown-body { ... }`. My version does by tags like `body { ... }`.
 - [cat1.jpg][cat1.jpg] is a work of [Francesca Cesa Bianchi][Francesca Cesa Bianchi], copied from [here][cat1-orig], and published under [cc by-sa 3.0 it][cc by-sa 3.0 it].
-- [cat2.jpg][cat2.jpg] is a work of [lisa zins][lisa zins], copied from [here][cat2-orig], and published under [cc by 2.0][cc by 2.0].
+- [cat2.jpg][cat2.jpg] is a work of [lisa zins][lisa zins], copied from [here](https://commons.wikimedia.org/wiki/File:%22Smile_Noah%22_-_%22THBPBPTHPT%5E%5E%22_-))_-_Flickr_-_Lisa_Zins.jpg
+), and published under [cc by 2.0][cc by 2.0].
 
 <!-- links -->
 [github-markdown-css]: https://github.com/sindresorhus/github-markdown-css
@@ -54,9 +55,3 @@ This software is published under MIT license.
 [Francesca Cesa Bianchi]: https://commons.wikimedia.org/wiki/File:%22_11_-_ITALY_-_cat.JPG
 [Lisa Zins]: https://www.flickr.com/people/94846844@N04
 [cat1-orig]: https://commons.wikimedia.org/wiki/Category:Domestic_cats#/media/File:%22_11_-_ITALY_-_cat.JPG
-[cat2-orig]: https://commons.wikimedia.org/wiki/File:%22Smile_Noah%22_-_%22THBPBPTHPT%5E%5E%22_-))_-_Flickr_-_Lisa_Zins.jpg
-
-
-<!-- 
-
- -->
