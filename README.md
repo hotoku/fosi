@@ -41,11 +41,12 @@ This software is published under MIT license.
 [github-markdown-css]: https://github.com/sindresorhus/github-markdown-css
 [MIT]: https://opensource.org/licenses/MIT
 [markdown-github.css]: ./templates/markdown-github.css
-[cat2-orig]: https://commons.wikimedia.org/wiki/Category:Domestic_cats#/media/File:%22Smile_Noah%22_-_%22THBPBPTHPT^^%22_-))_-_Flickr_-_Lisa_Zins.jpg
-[cat1-orig]: https://commons.wikimedia.org/wiki/Category:Domestic_cats#/media/File:%22_11_-_ITALY_-_cat.JPG
-<!-- 
 [cat1-jpg]: ./samples/cat1.jpg
 [cat2-jpg]: ./samples/cat2.jpg
+
+<!-- 
+[cat2-orig]: https://commons.wikimedia.org/wiki/Category:Domestic_cats#/media/File:%22Smile_Noah%22_-_%22THBPBPTHPT^^%22_-))_-_Flickr_-_Lisa_Zins.jpg
+[cat1-orig]: https://commons.wikimedia.org/wiki/Category:Domestic_cats#/media/File:%22_11_-_ITALY_-_cat.JPG
 
 [cc by 2.0]: https://creativecommons.org/licenses/by/2.0/
 [cc by-sa 3.0 it]: https://creativecommons.org/licenses/by-sa/3.0/it/deed.en
