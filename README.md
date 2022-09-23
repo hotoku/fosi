@@ -38,7 +38,7 @@ This software is published under MIT license.
 - [cat2.jpg][cat2.jpg] is a work of [lisa zins][lisa zins], copied from [here][cat2-orig], and published under [cc by 2.0][cc by 2.0].
 
 <!-- links -->
-
+<!-- 
 [github-markdown-css]: https://github.com/sindresorhus/github-markdown-css
 [MIT]: https://opensource.org/licenses/MIT
 [markdown-github.css]: ./templates/markdown-github.css
@@ -50,4 +50,4 @@ This software is published under MIT license.
 [cc by-sa 3.0 it]: https://creativecommons.org/licenses/by-sa/3.0/it/deed.en
 [Sindre Sorhus ]: https://github.com/sindresorhus
 [Francesca Cesa Bianchi]: https://commons.wikimedia.org/wiki/File:%22_11_-_ITALY_-_cat.JPG
-[Lisa Zins]: https://www.flickr.com/people/94846844@N04
+[Lisa Zins]: https://www.flickr.com/people/94846844@N04 -->
