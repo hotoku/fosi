@@ -38,8 +38,9 @@ This software is published under MIT license.
 - [cat2.jpg][cat2.jpg] is a work of [lisa zins][lisa zins], copied from [here][cat2-orig], and published under [cc by 2.0][cc by 2.0].
 
 <!-- links -->
-<!-- 
 [github-markdown-css]: https://github.com/sindresorhus/github-markdown-css
+
+<!-- 
 [MIT]: https://opensource.org/licenses/MIT
 [markdown-github.css]: ./templates/markdown-github.css
 [cat1.jpg]: ./samples/cat1.jpg
