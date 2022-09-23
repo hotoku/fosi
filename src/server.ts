@@ -1,7 +1,7 @@
 import express from "express";
 import livereload from "livereload";
 import fs from "fs";
-import { convertString } from "./convert";
+import { convertMermaidTag, convertString } from "./convert";
 import ejs from "ejs";
 import path from "path";
 import { TargetFileExists } from "./exceptions";
@@ -31,7 +31,8 @@ export const launchServers = (
       contents: converted,
       mermaid_version: version,
     });
-    fs.writeFileSync(destFile, html);
+    const replaced = convertMermaidTag(html);
+    fs.writeFileSync(destFile, replaced);
   };
 
   writeHtml();
