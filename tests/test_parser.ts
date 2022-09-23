@@ -1,26 +1,30 @@
 import { expect } from "chai";
-import { parse, NodeType } from "node-html-parser";
+import { JSDOM } from "jsdom";
 
 describe("parser test", () => {
-  it("should work", () => {
-    const element = parse(
+  it("should extract code tag", () => {
+    const dom = new JSDOM(
       `
 <!DOCTYPE html>
 <html>
  <body>
   <pre>
+   <code class="language-mermaid">
+flowchart TD
+  a --> b
+   </code>
+  </pre>
+  <pre>
+   <code class="language-mermaid">
+graph TD
+  a --> b
+   </code>
   </pre>
  </body>
 </html>
 `.trim()
     );
-    expect(element.childNodes.length).to.be.equal(2);
-    const html = element.childNodes[1];
-    switch (html.nodeType) {
-      case NodeType.ELEMENT_NODE:
-        break;
-      default:
-        throw "panic";
-    }
+    const codes = dom.window.document.querySelectorAll("code.language-mermaid");
+    expect(codes.length).to.be.equal(2);
   });
 });
