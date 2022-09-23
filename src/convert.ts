@@ -1,19 +1,12 @@
 import { marked } from "marked";
 import highlightjs from "highlight.js";
 import fs from "fs";
-import * as xpath from "xpath-ts";
-import { DOMParserImpl } from "xmldom-ts";
+import { JSDOM } from "jsdom";
 
-const removeDoctype = (s: string): { result: string; replaced: boolean } => {
-  const replaced = s.search("<!DOCTYPE html>") < 0;
-  return {
-    result: s.replace("<!DOCTYPE html>", ""),
-    replaced: replaced,
-  };
-};
-
-const addDoctype = (s: string): string => {
-  return "<!DOCTYPE html>\n" + s;
+export const createElement = (s: string): Node => {
+  const div = new JSDOM().window.document.createElement("div");
+  div.innerHTML = s.trim();
+  return div.firstChild as ChildNode;
 };
 
 export const convertString = (src: string): string => {
@@ -36,19 +29,12 @@ export const convertFile = (srcPath: string, destPath: string) => {
   fs.writeFileSync(destPath, ret);
 };
 
+/*
 export const convertMermaidTag = (html: string): string => {
-  const parser = new DOMParserImpl();
-  const { result: replaced, replaced: is_replaced } = removeDoctype(html);
-  const doc = parser.parseFromString(replaced.trim(), "text/html");
-  const nodes = xpath.select(
-    "//pre[child::code[contains(@class, 'language-mermaid')]]",
-    doc
-  ) as Node[];
+  const dom = new JSDOM(html);
+  const nodes = dom.window.document.querySelectorAll("code.language-mermaid");
   for (const node of nodes) {
-    (node.parentNode as ParentNode).replaceChild(
-      parser.parseFromString(`<div class='mermaid'>${node.textContent}</div>`),
-      node
-    );
+    // (node.parentNode as ParentNode).replaceChild();
   }
   const ret = doc.toString();
   if (is_replaced) {
@@ -57,3 +43,4 @@ export const convertMermaidTag = (html: string): string => {
     return ret;
   }
 };
+*/
