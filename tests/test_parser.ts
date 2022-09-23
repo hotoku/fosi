@@ -1,5 +1,5 @@
 import { expect } from "chai";
-import { parse } from "node-html-parser";
+import { parse, NodeType } from "node-html-parser";
 
 describe("parser test", () => {
   it("should work", () => {
@@ -15,5 +15,12 @@ describe("parser test", () => {
 `.trim()
     );
     expect(element.childNodes.length).to.be.equal(2);
+    const html = element.childNodes[1];
+    switch (html.nodeType) {
+      case NodeType.ELEMENT_NODE:
+        break;
+      default:
+        throw "panic";
+    }
   });
 });
