@@ -8,13 +8,11 @@ This is a sample text.
 
 ```mermaid
 graph LR
-a --> b --> e
-a --> c --> e
-a --> d --> e
-e --> f & g & h
-f & g --> i
-h --> j
-i & j --> k
+a --> b & c & d
+b & c & d --> e
+e --> f & g --> h
+e --> i
+i & h --> j
 ```
 
 ## tasks
@@ -48,6 +46,12 @@ const f = (x: number, y: number): number => {
 }
 ```
 
+## table
+
+| item1 | item2 |
+|-------|-------|
+| hoge  | fuga  |
+
 ## picture
 
-![cat](./cat2.jpg)
+![cat](./cat1.jpg)
