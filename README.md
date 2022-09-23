@@ -39,9 +39,10 @@ This software is published under MIT license.
 
 <!-- links -->
 [github-markdown-css]: https://github.com/sindresorhus/github-markdown-css
+[MIT]: https://opensource.org/licenses/MIT
+
 
 <!-- 
-[MIT]: https://opensource.org/licenses/MIT
 [markdown-github.css]: ./templates/markdown-github.css
 [cat1.jpg]: ./samples/cat1.jpg
 [cat2.jpg]: ./samples/cat2.jpg
