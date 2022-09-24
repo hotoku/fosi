@@ -2,6 +2,8 @@
 
 livereloading server for markdown editing
 
+![usage](./samples/fosi.gif)
+
 ## usage
 
 Run this command.
