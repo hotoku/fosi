@@ -8,7 +8,7 @@ import { TargetFileExists } from "./exceptions";
 const parseArguments = () => {
   const argv = yargs(process.argv.slice(2))
     .options({
-      i: { type: "string", demandOption: true, describe: "input file" },
+      i: { type: "string", describe: "input file", default: "./README.md" },
       d: {
         type: "string",
         describe:
