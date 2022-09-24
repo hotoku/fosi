@@ -29,6 +29,12 @@ Options:
   -f             overwrite existing output                             [boolean]
 ```
 
+## install
+
+``` shellsession
+$ npm i -g @hotoku/fosi
+```
+
 ## license
 
 This software is published under MIT license.
