@@ -5,12 +5,12 @@ import { convertMermaidTag, convertString } from "./convert";
 import ejs from "ejs";
 import path from "path";
 import { TargetFileExists } from "./exceptions";
-import * as readline from "readline";
 
 interface IOptions {
   force?: boolean;
-  version?: string;
-  port?: number;
+  mermaid_version?: string;
+  htmlPort?: number;
+  jsPort?: number;
   output?: string;
 }
 
@@ -20,9 +20,16 @@ export const launchServers = (
 ): void => {
   const publicDir = path.dirname(sourceFile);
   const destFile = opts.output || `${publicDir}/index.html`;
-  const version = opts.version || "9.1.7";
+  const mermaid_version = opts.mermaid_version || "9.1.7";
   const templateDir = `${__dirname}/../templates`;
-  const port = opts.port || 3000;
+  const htmlPort = opts.htmlPort || 3000;
+  const jsPort = opts.jsPort || 35729;
+
+  console.log(`sourceFile=${sourceFile}
+destFile=${destFile}
+publicDir=${publicDir}
+htmlPort=${htmlPort}
+jsPort=${jsPort}`);
 
   if (fs.existsSync(destFile) && !opts.force) {
     throw new TargetFileExists(destFile);
@@ -34,7 +41,8 @@ export const launchServers = (
     const template = fs.readFileSync(templateFile).toString();
     const html = ejs.render(template, {
       contents: converted,
-      mermaid_version: version,
+      mermaid_version: mermaid_version,
+      js_port: jsPort,
     });
     const replaced = convertMermaidTag(html);
     fs.writeFileSync(destFile, replaced);
@@ -47,10 +55,10 @@ export const launchServers = (
   const app = express();
   app.use("/template", express.static(templateDir));
   app.use("/", express.static(publicDir));
-  app.listen(3000);
+  app.listen(htmlPort);
 
-  const server = livereload.createServer();
+  const server = livereload.createServer({ port: jsPort });
   server.watch(publicDir);
 
-  console.log(`Servers start. Visit http://localhost:${port}`);
+  console.log(`Servers start. Visit http://localhost:${htmlPort}`);
 };
