@@ -7,7 +7,7 @@
     "fosi": "./dist/index.js"
   },
   "scripts": {
-    "publish": "npm publish --access public",
+    "release": "npm publish --access public",
     "build": "npx tsc -p .",
     "start": "node dist/index.js -i samples/sample.md -f",
     "test": "mocha -r ts-node/register 'tests/**/*.ts'"
