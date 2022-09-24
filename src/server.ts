@@ -5,11 +5,13 @@ import { convertMermaidTag, convertString } from "./convert";
 import ejs from "ejs";
 import path from "path";
 import { TargetFileExists } from "./exceptions";
+import * as readline from "readline";
 
 interface IOptions {
   force?: boolean;
   version?: string;
   port?: number;
+  output?: string;
 }
 
 export const launchServers = (
@@ -17,7 +19,7 @@ export const launchServers = (
   opts: IOptions = {}
 ): void => {
   const publicDir = path.dirname(sourceFile);
-  const destFile = `${publicDir}/index.html`;
+  const destFile = opts.output || `${publicDir}/index.html`;
   const version = opts.version || "9.1.7";
   const templateDir = `${__dirname}/../templates`;
   const port = opts.port || 3000;

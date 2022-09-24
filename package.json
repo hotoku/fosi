@@ -9,7 +9,7 @@
   "scripts": {
     "publish": "npm publish --access public",
     "build": "npx tsc -p .",
-    "start": "node dist/server.js",
+    "start": "node dist/index.js -i samples/sample.md -f",
     "test": "mocha -r ts-node/register 'tests/**/*.ts'"
   },
   "repository": {
