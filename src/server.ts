@@ -5,6 +5,7 @@ import { convertMermaidTag, convertString } from "./convert";
 import ejs from "ejs";
 import path from "path";
 import { TargetFileExists } from "./exceptions";
+import * as portfinder from "portfinder";
 
 interface IOptions {
   force?: boolean;
@@ -14,16 +15,20 @@ interface IOptions {
   output?: string;
 }
 
-export const launchServers = (
+export const launchServers = async (
   sourceFile: string,
   opts: IOptions = {}
-): void => {
+): Promise<void> => {
   const publicDir = path.dirname(sourceFile);
   const destFile = opts.output || `${publicDir}/index.html`;
   const mermaid_version = opts.mermaid_version || "9.1.7";
   const templateDir = `${__dirname}/../templates`;
-  const htmlPort = opts.htmlPort || 3000;
-  const jsPort = opts.jsPort || 35729;
+  const htmlPort = await portfinder.getPortPromise({
+    port: opts.htmlPort || 3000,
+  });
+  const jsPort = await portfinder.getPortPromise({
+    port: opts.jsPort || 35729,
+  });
 
   console.log(`sourceFile=${sourceFile}
 destFile=${destFile}

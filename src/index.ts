@@ -20,17 +20,19 @@ const parseArguments = () => {
   return argv;
 };
 
-const main = () => {
+const main = async () => {
   const argv = parseArguments();
   const sourceFile = path.resolve(argv.i);
   try {
-    launchServers(sourceFile, { force: argv.f, output: argv.d });
+    await launchServers(sourceFile, { force: argv.f, output: argv.d });
   } catch (e: any) {
     if (e instanceof TargetFileExists) {
       console.log(e.message);
       console.log(
         "If you want to over write the file, start me with -f option."
       );
+    } else {
+      console.log(e);
     }
   }
 };
