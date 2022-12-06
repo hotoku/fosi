@@ -35,6 +35,15 @@ Options:
 $ npm i -g @hotoku/fosi
 ```
 
+### for use from emacs (optional)
+
+This repo includes very simple function that launches a fosi process from Emacs.
+The source file is [here](./elisp/fosi.el).
+
+You can install the elisp by the following steps.
+
+1. download the raw file from github. eg.
+
 ## license
 
 This software is published under MIT license.
