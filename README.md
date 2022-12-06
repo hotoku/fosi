@@ -42,8 +42,9 @@ The source file is [here](./elisp/fosi.el).
 
 You can install the elisp by the following steps.
 
-1. download the raw file from github. eg. `curl -o /tmp/fosi.el https://raw.githubusercontent.com/hotoku/fosi/main/elisp/fosi.el`
-1.
+1. Download the raw file from github. eg. `curl -o /tmp/fosi.el https://raw.githubusercontent.com/hotoku/fosi/main/elisp/fosi.el`
+1. Install the file by invoking `M-x package-install-file` and input the path you downloaded in the previous step.
+1. Put `(require 'fosi)` in your `init.el`.
 
 ## license
 
