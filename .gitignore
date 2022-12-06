@@ -73,3 +73,5 @@ typings/
 
 /samples/index.html
 /index.html
+
+/elisp/*.elc
