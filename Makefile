@@ -4,6 +4,8 @@ VERSION := NODATA
 .PHONY: release
 release: tree-clean check-version
 	npm run bump $(VERSION)
+	git add package.json
+	git ci -m"bump: $(VERSION)"
 	npm run build
 	git tag v$(VERSION)
 	git push --tag

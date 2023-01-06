@@ -1,6 +1,6 @@
 {
   "name": "@hotoku/fosi",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "description": "livereloading server for markdown editing ",
   "main": "./dist/index.js",
   "bin": {
