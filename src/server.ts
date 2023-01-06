@@ -21,7 +21,7 @@ export const launchServers = async (
 ): Promise<void> => {
   const publicDir = path.dirname(sourceFile);
   const destFile = opts.output || `${publicDir}/index.html`;
-  const mermaid_version = opts.mermaid_version || "9.1.7";
+  const mermaid_version = opts.mermaid_version || "9.3.0";
   const templateDir = `${__dirname}/../templates`;
   const htmlPort = await portfinder.getPortPromise({
     port: opts.htmlPort || 3000,
