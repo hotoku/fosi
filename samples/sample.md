@@ -52,6 +52,12 @@ const f = (x: number, y: number): number => {
 |-------|-------|
 | hoge  | fuga  |
 
+## math
+
+$$
+\frac{1}{\sqrt{2 \pi \sigma^2}} \exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)
+$$
+
 ## picture
 
 ![cat](./cat1.jpg)
