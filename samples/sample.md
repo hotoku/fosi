@@ -54,6 +54,10 @@ const f = (x: number, y: number): number => {
 
 ## math
 
+The pdf of normal distribution is $\frac{1}{\sqrt{2 \pi \sigma^2}} \exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)$.
+
+It can be seen in equation mode.
+
 $$
 \frac{1}{\sqrt{2 \pi \sigma^2}} \exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)
 $$
