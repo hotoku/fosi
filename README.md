@@ -15,7 +15,7 @@ $ fosi -i document.md
 Then,
 
 1. A process starts watching your `document.md` and automatically compiles it to html when updated.
-2. The compiled html is served at http://localhost:3000/ and the file will be reloaded when it is updated.
+2. The compiled html is served at http://localhost:3000/ and the file will be reloaded when it is updated. If the port is already in use, the next free one is chosen; the actual url is printed when the servers start.
 3. The files in the folders under the one where `document.md` exists are also watched and served, your browser will reload when these files are updated.
 
 Other command line options are following:
@@ -24,8 +24,9 @@ Other command line options are following:
 Options:
       --help     Show help                                             [boolean]
       --version  Show version number                                   [boolean]
-  -i             input file                                  [string] [required]
-  -d             output file                  [string] [default: "./index.html"]
+  -i             input file                    [string] [default: "./README.md"]
+  -d             output file. if not given, index.html in the same folder as
+                 input file.                                            [string]
   -f             overwrite existing output                             [boolean]
 ```
 
