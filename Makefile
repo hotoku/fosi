@@ -1,3 +1,4 @@
+SHELL := /bin/bash
 VERSION := NODATA
 
 
@@ -8,6 +9,7 @@ release: tree-clean check-version
 	git ci -m"bump: $(VERSION)"
 	npm run build
 	git tag v$(VERSION)
+	git push
 	git push --tag
 	npm run release
 

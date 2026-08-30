@@ -6,6 +6,10 @@
   "bin": {
     "fosi": "./dist/index.js"
   },
+  "files": [
+    "dist",
+    "templates"
+  ],
   "scripts": {
     "release": "npm publish --access public",
     "build": "npx tsc -p .",
