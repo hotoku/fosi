@@ -12,7 +12,7 @@ const parseArguments = () => {
       d: {
         type: "string",
         describe:
-          "output file. if not given, index.html in the same folder as input file.",
+          "output file. if not given, a temporary file is created and removed on exit.",
       },
       f: { type: "boolean", describe: "overwrite existing output" },
     })

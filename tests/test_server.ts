@@ -64,14 +64,49 @@ describe("serving the output file", () => {
     fs.rmSync(workDir, { recursive: true, force: true });
   });
 
-  it("should serve the default output at the root", async () => {
+  it("should serve a temporary output at the root when -d is omitted", async () => {
     const s = await launch();
-    expect(s.destFile).to.be.equal(path.join(workDir, "docs", "index.html"));
+    expect(s.tempDir).to.be.a("string");
+    expect(s.destFile).to.be.equal(
+      path.join(s.tempDir as string, "index.html")
+    );
+    expect(fs.existsSync(s.destFile)).to.be.true;
 
     const res = await get(root(s));
     expect(res.status).to.be.equal(200);
     const doc = new JSDOM(res.body).window.document;
     expect(doc.querySelectorAll("h1").length).to.be.equal(1);
+  });
+
+  it("should leave the source folder untouched when -d is omitted", async () => {
+    await launch();
+    expect(fs.readdirSync(path.join(workDir, "docs")).sort()).to.be.deep.equal([
+      "asset.txt",
+      "doc.md",
+    ]);
+  });
+
+  it("should keep serving assets next to the source when -d is omitted", async () => {
+    const s = await launch();
+
+    const res = await get(`${root(s)}asset.txt`);
+    expect(res.status).to.be.equal(200);
+    expect(res.body).to.be.equal("an asset");
+  });
+
+  it("should remove the temporary folder on close", async () => {
+    const s = await launch();
+    const tempDir = s.tempDir as string;
+    expect(fs.existsSync(tempDir)).to.be.true;
+
+    await s.close();
+    servers = undefined;
+    expect(fs.existsSync(tempDir)).to.be.false;
+  });
+
+  it("should not make a temporary folder when -d is given", async () => {
+    const s = await launch(path.join(workDir, "elsewhere", "out.html"));
+    expect(s.tempDir).to.be.undefined;
   });
 
   it("should serve the output at the root when -d renames it", async () => {

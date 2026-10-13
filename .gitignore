@@ -71,7 +71,4 @@ typings/
 /dist/
 /tasks.md
 
-/samples/index.html
-/index.html
-
 /elisp/*.elc

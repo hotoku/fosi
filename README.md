@@ -14,7 +14,7 @@ $ fosi -i document.md
 
 Then,
 
-1. A process starts watching your `document.md` and automatically compiles it to html when updated.
+1. A process starts watching your `document.md` and automatically compiles it to html when updated. The html goes to a temporary file that is removed when fosi exits, so nothing is left next to `document.md`. Pass `-d` if you want to keep the output.
 2. The compiled html is served at http://localhost:3000/ and the file will be reloaded when it is updated. If the port is already in use, the next free one is chosen; the actual url is printed when the servers start.
 3. The files in the folders under the one where `document.md` exists are also watched and served, your browser will reload when these files are updated.
 
@@ -25,8 +25,8 @@ Options:
       --help     Show help                                             [boolean]
       --version  Show version number                                   [boolean]
   -i             input file                    [string] [default: "./README.md"]
-  -d             output file. if not given, index.html in the same folder as
-                 input file.                                            [string]
+  -d             output file. if not given, a temporary file is created and
+                 removed on exit.                                       [string]
   -f             overwrite existing output                             [boolean]
 ```
 
